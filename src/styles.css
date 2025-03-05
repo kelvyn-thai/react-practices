@@ -1,0 +1,11 @@
+.my-button {
+  background-color: #ffffff;
+  height: 28px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  border-radius: 4px;
+  border-width: 0.5px;
+}
