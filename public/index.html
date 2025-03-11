@@ -7,6 +7,24 @@
     <link href="css/style.css" rel="stylesheet" />
   </head>
   <body>
-    <div id="root" />
+    <div id="root">
+      <p name="time"></p>
+      <div name="divEle">content of div</div>
+      <button onclick="onClickBtn()">Click</button>
+    </div>
+    <script>
+      const main = () => {
+        const $time = document.getElementByName("time")[0];
+        $times.content = new Date();
+      };
+      function onClickBtn() {
+        const $divEle = document.getElementByName("divEle")[0];
+        const $newEle = document.createElement("span");
+
+        $divEle.parentNode.replaceChild($newEle);
+      }
+
+      main();
+    </script>
   </body>
 </html>
