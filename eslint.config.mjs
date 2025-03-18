@@ -1,9 +1,9 @@
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 import { FlatCompat } from "@eslint/eslintrc";
+import importPlug from "eslint-plugin-import";
 import jsxA11y from "eslint-plugin-jsx-a11y";
 import reactHooks from "eslint-plugin-react-hooks";
-import importPlug from "eslint-plugin-import";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -19,6 +19,7 @@ const eslintConfig = [
     "plugin:jsx-a11y/recommended",
     "plugin:react-hooks/recommended",
     "plugin:import/recommended",
+    "plugin:prettier/recommended",
   ),
   {
     files: ["**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}"],
@@ -37,6 +38,8 @@ const eslintConfig = [
       },
     },
     rules: {
+      "react/display-name": "off", // ✅ Turn off display name rule
+
       "jsx-a11y/alt-text": "warn",
       "jsx-a11y/anchor-is-valid": "warn",
       "jsx-a11y/no-autofocus": "warn",
@@ -59,7 +62,6 @@ const eslintConfig = [
             "sibling",
             "index",
           ],
-          "newlines-between": "always",
           alphabetize: { order: "asc", caseInsensitive: true },
         },
       ],
